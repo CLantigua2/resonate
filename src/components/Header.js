@@ -11,9 +11,9 @@ const Header = () => (
             <Link to="/"><p>Resonate.com</p></Link>
         </Child>
         <Child right>
-            <p>Blog</p>
-            <p>Wishlist</p>
-            <p>My Account</p>
+            <Link to="/"><p>Blog</p></Link>
+            <Link to="/"><p>Wishlist</p></Link>
+            <Link to="/"><p>My Account</p></Link>
         </Child>
     </Container>
 )
@@ -37,7 +37,14 @@ const Child = styled.div`
     justify-content: space-between;
     flex: ${(({ left, middle, right }) => left ? 2 : middle ? 2 : right ? 3 : null)};
     color: #999999;
-    p {
-        font-size: 1.6rem;
+    a {
+        p {
+            font-size: 1.6rem;
+            color: ${({theme}) => theme.color.secondary};
+            transition: 0.3s ease-in-out;
+            :hover {
+                color: ${({theme}) => theme.color.primary};
+            }
+        }
     }
 `
