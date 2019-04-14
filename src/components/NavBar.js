@@ -30,7 +30,7 @@ const Container = styled.div`
 
 const Child = styled.div`
     justify-content: space-between;
-    width: 100%;
+    width: 50%;
     margin: 0 4%;
     .navLinks {
         background: none;
@@ -41,7 +41,7 @@ const Child = styled.div`
         padding: 10px;
         transition: 0.3s ease-in-out;
         :hover {
-            color: red;
+            color: ${({theme}) => theme.color.danger};
             border-color: red;
         }
     }

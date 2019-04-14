@@ -22,22 +22,24 @@ export default RightContent
 const Container = styled.div`
     display: flex;
     flex-direction: row;
+    width: 70%;
 .text-one {
+        position: inline;
+        right: 2%;
         align-self: center;
         z-index: 2;
         border-radius: 10px;
-        color: #ffffff;
+        color: ${({theme}) => theme.color.dark};
         font-style: italic;
-        background: #77C68B;
+        background: white;
+    box-shadow: ${({theme}) => theme.shadows.one};
         padding: 20px 20px;
-        width: 100%;
         text-align: center;
-        margin: 0;
+        width: 500px;
     }
     img {
-        width: 50%;
-        height: 700px;
-        transform: translateX(550px);
+        max-width: 550px;
+        transform: translateX(100px);
         filter: contrast(110%);
         align-self: center;
     }`

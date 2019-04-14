@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import RightContent from './RightContent'
+import LeftContent from './LeftContent'
 
 const Banner = () => (
     <Container>
+        <LeftContent />
         <RightContent />
-
-
     </Container>
 )
 
@@ -17,6 +17,7 @@ const Container = styled.div`
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    padding: 25px;
 
 `
