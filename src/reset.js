@@ -37,7 +37,9 @@ footer, header, hgroup, menu, nav, section {
 html {
 	box-sizing: border-box;
 	font-family: 'Roboto', 'Montserrat', sans-serif;
-    font-size: 62.5%;
+	font-size: 62.5%;
+	height: 100%;
+	margin: 0;
 }
 body {
 	line-height: 1;

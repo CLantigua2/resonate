@@ -10,7 +10,6 @@ const list = [PurpleCluster, RainbowSphere, RainbowOrgone ]
 const Featured = () => (
     <Container>
     <Carousel withoutControls={true}
-    autoGenerateStyleTag={true}
     wrapAround={true}
     pauseOnHover={true}
     autoplay={true}
@@ -26,7 +25,8 @@ const Featured = () => (
 export default Featured
 
 const Container = styled.div`
-    width: 80%;
+    width: 90%;
+    padding: 20px;
     margin: 0 auto;
     margin-top: 100px;
 `
