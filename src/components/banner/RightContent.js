@@ -1,18 +1,11 @@
 import React, { Suspense } from 'react'
 import styled from '@emotion/styled'
 import buddhastatue from '../../image/buddhastatue.jpg'
-import Fade from 'react-reveal/Fade'
 
 const RightContent = () => (
     <Container>
-
         <Suspense fallback={<p>Loading...</p>}>
             <div className="background" >
-                <Fade right>
-                    <div className="text-one">
-                        <h4>Begin your spiritual journey</h4>
-                    </div>
-                </Fade>
             </div>
         </Suspense>
     </Container >
