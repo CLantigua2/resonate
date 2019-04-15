@@ -9,6 +9,10 @@ const list = [PurpleCluster, RainbowSphere, RainbowOrgone ]
 
 const Featured = () => (
     <Container>
+    <div className="header">
+        <h5>Featured Products</h5>
+        <p>On Sale NOW!!!</p>
+        </div>
     <Carousel withoutControls={true}
     wrapAround={true}
     pauseOnHover={true}
@@ -29,4 +33,15 @@ const Container = styled.div`
     padding: 20px;
     margin: 0 auto;
     margin-top: 100px;
+    .header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin-bottom: 50px;
+        h5 {
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+    }
 `
