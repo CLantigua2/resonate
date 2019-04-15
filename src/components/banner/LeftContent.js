@@ -5,8 +5,8 @@ import Button from '../common/Button'
 const LeftContainer = () => (
     <Container>
         <div className="card">
-        <h4>Sign up for Free</h4>
-        <p>Never miss a deal</p>
+            <h4>Sign up for Free</h4>
+            <p>Never miss a deal</p>
         </div>
         <div className="signup">
             <Button primary={true}>Sign up</Button>
@@ -20,9 +20,9 @@ const LeftContainer = () => (
 export default LeftContainer
 
 const Container = styled.div`
-    width: 30%;
-    margin-top: 200px;
-    color: ${(({theme}) => theme.color.dark)};
+    width: 35%;
+    margin-top: 100px;
+    color: ${(({ theme }) => theme.color.dark)};
     background: white;
     height: 100%;
     padding: 25px;
@@ -31,7 +31,7 @@ const Container = styled.div`
     flex-direction: column;
     text-align: center;
     line-height: 5em;
-    box-shadow: ${({theme}) => theme.shadows.one};
+    box-shadow: ${({ theme }) => theme.shadows.one};
     z-index: 2;
     /* transform: translateX(250px); */
     .signup {

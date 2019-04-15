@@ -6,15 +6,16 @@ import Fade from 'react-reveal/Fade'
 const RightContent = () => (
     <Container>
 
-    <Suspense fallback={<p>Loading...</p>}>
-            <img src={buddhastatue} alt="Statue of buddha" />
+        <Suspense fallback={<p>Loading...</p>}>
+            <div className="background" >
+                <Fade right>
+                    <div className="text-one">
+                        <h4>Begin your spiritual journey</h4>
+                    </div>
+                </Fade>
+            </div>
         </Suspense>
-        <Fade right>
-        <div className="text-one">
-            <h4>Begin your spiritual journey</h4>
-        </div>
-        </Fade>
-    </Container>
+    </Container >
 )
 
 export default RightContent
@@ -22,24 +23,29 @@ export default RightContent
 const Container = styled.div`
     display: flex;
     flex-direction: row;
-    width: 70%;
+    width: 100%;
+    .background {
+        background-image: url(${buddhastatue});
+        min-height: 100%;
+        min-width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right;
 .text-one {
         position: inline;
         right: 2%;
         align-self: center;
+        margin-top: 358px;
+        margin-left: 355px;
+        max-width: 60%;
         z-index: 2;
         border-radius: 10px;
-        color: ${({theme}) => theme.color.dark};
+        color: ${({ theme }) => theme.color.dark};
         font-style: italic;
         background: white;
-    box-shadow: ${({theme}) => theme.shadows.one};
+        box-shadow: ${({ theme }) => theme.shadows.one};
         padding: 20px 20px;
         text-align: center;
-        width: 500px;
+        /* width: 500px; */
     }
-    img {
-        max-width: 550px;
-        transform: translateX(100px);
-        filter: contrast(110%);
-        align-self: center;
-    }`
+}`
