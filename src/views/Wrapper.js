@@ -17,6 +17,6 @@ const Container = styled.div`
     max-width: 1440px;
     margin: 0 auto;
     .inside {
-        padding-bottom: 500px;
+        padding-bottom: 200px;
     }
 `

@@ -29,7 +29,7 @@ const Container = styled.div`
         margin-bottom: 20px;
     }
     .image {
-        width: 400px;
+        width: 380px;
         margin-bottom: 20px;
     }
     p {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Suspense, lazy } from 'react'
 import styled from '@emotion/styled'
 import ImgCard from '../common/ImgCard'
 import Herb1 from '../../image/herbs/herbs1.jpg'
@@ -29,25 +29,37 @@ const images = [
 const Blog = () => {
     const content = images.map(item => {
         return (
-            <ImgCard key={item.id} id={item.id} title={item.title} image={item.img} alt={item.title} content={item.content}>
+            <Suspense key={item.id} fallback={<div>Loading...</div>}>
+            <ImgCard id={item.id} title={item.title} image={item.img} alt={item.title} content={item.content}>
             </ImgCard>
+            </Suspense>
         )
     })
     return (
-        <Container>
+        <Wrapper>
+            <div>
+            <h4>Recent Blogs</h4>
+            </div>
+        <div className="container">
             {content}
-        </Container>
+        </div>
+        </Wrapper>
             )
     }
 
 
 export default Blog
 
-const Container = styled.div`
-    display: flex;
-    flex-direction: row;
-    margin-top: 40px;
-    /* flex-wrap: wrap; */
-    /* width: 100%; */
-
+const Wrapper = styled.div`
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 50px;
+    .container {
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+        width: 100%;
+    }
 `

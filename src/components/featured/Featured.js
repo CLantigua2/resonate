@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Suspense} from 'react'
 import styled from '@emotion/styled'
 import Carousel from 'nuka-carousel';
 import PurpleCluster from '../../image/featuredproducts/PurpleCluster.jpg'
@@ -20,7 +20,13 @@ const Featured = () => (
     animation="zoom"
     cellAlign="center"
     >
-        {list.map((item, i) => <img key={i} src={item} alt={`featured product ${i}`} />)}
+        {list.map((item, i) => {
+        return (
+             <Suspense key={item.id} fallback={<div>Loading...</div>}>
+                <img key={i} src={item} alt={`featured product ${i}`} />
+        </Suspense>
+        )}
+    )}
     </Carousel>
     </Container>
 

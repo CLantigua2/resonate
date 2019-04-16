@@ -22,6 +22,7 @@ const Footer = () => (
             <Link to="/">Contact Us</Link>
             </div>
         </footer>
+        <p>Copywrite &copy; Resonate</p>
     </Container>
 )
 
