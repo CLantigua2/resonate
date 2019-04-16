@@ -19,4 +19,15 @@ const Container = styled.div`
     .inside {
         padding-bottom: 200px;
     }
+     @media ${({theme}) => theme.media.tablet} {
+            max-width: 768px;
+        }
+    @media ${({theme}) => theme.media.mobile} {
+            max-width: 320px;
+            padding-bottom: 0;
+        }
+    @media ${({theme}) => theme.media.laptop} {
+            max-width: 1024px;
+        }
+
 `

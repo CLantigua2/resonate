@@ -61,5 +61,12 @@ const Wrapper = styled.div`
         flex-direction: row;
         margin-top: 40px;
         width: 100%;
+        @media ${({theme}) => theme.media.mobile} {
+            flex-direction: column;
+        }
+    @media ${({theme}) => theme.media.tablet} {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 `

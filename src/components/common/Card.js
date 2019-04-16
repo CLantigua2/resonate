@@ -14,4 +14,8 @@ const Container = styled.div`
     box-shadow: ${({theme}) => theme.shadows.three};
     width: 100%;
     height: 100%;
+     @media ${({theme}) => theme.media.mobile} {
+            flex-direction: column;
+        }
+
 `

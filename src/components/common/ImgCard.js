@@ -38,5 +38,16 @@ const Container = styled.div`
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     }
+    @media ${({theme}) => theme.media.tablet} {
+            max-width: 768px;
+        }
+    @media ${({theme}) => theme.media.mobile} {
+        max-width: 320px;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+    @media ${({theme}) => theme.media.laptop} {
+            max-width: 1024px;
+        }
 
 `
