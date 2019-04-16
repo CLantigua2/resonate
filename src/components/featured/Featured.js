@@ -4,6 +4,7 @@ import Carousel from 'nuka-carousel';
 import PurpleCluster from '../../image/featuredproducts/PurpleCluster.jpg'
 import RainbowOrgone from '../../image/featuredproducts/RainbowOrgone.jpg'
 import RainbowSphere from '../../image/featuredproducts/RainbowSphere.jpg'
+import Alert from '../common/Alert'
 
 const list = [PurpleCluster, RainbowSphere, RainbowOrgone ]
 
@@ -17,12 +18,12 @@ const Featured = () => (
     wrapAround={true}
     pauseOnHover={true}
     autoplay={true}
-    animation="zoom"
+    // animation="zoom"
     cellAlign="center"
     >
         {list.map((item, i) => {
         return (
-             <Suspense key={item.id} fallback={<div>Loading...</div>}>
+             <Suspense key={item.id} fallback={<Alert success={true}>Loading...</Alert>}>
                 <img key={i} src={item} alt={`featured product ${i}`} />
         </Suspense>
         )}

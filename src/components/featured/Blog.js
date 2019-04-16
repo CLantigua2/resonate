@@ -1,9 +1,13 @@
 import React, {Suspense, lazy } from 'react'
 import styled from '@emotion/styled'
-import ImgCard from '../common/ImgCard'
+// import ImgCard from '../common/ImgCard'
 import Herb1 from '../../image/herbs/herbs1.jpg'
+import Alert from '../common/Alert'
 import Herb2 from '../../image/herbs/herbs2.jpg'
 import Herb3 from '../../image/herbs/herbs3.jpg'
+const ImgCard = lazy(() => import('../common/ImgCard'))
+
+
 
 const images = [
      {
@@ -29,7 +33,7 @@ const images = [
 const Blog = () => {
     const content = images.map(item => {
         return (
-            <Suspense key={item.id} fallback={<div>Loading...</div>}>
+            <Suspense key={item.id} fallback={<Alert success={true}>Loading...</Alert>}>
             <ImgCard id={item.id} title={item.title} image={item.img} alt={item.title} content={item.content}>
             </ImgCard>
             </Suspense>
