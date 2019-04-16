@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import Button from '../common/Button'
+import { Link } from 'react-router-dom'
 
 const LeftContainer = () => (
     <Container>
@@ -9,7 +10,7 @@ const LeftContainer = () => (
             <p>Never miss a deal</p>
         </div>
         <div className="signup">
-            <Button primary={true}>Sign up</Button>
+            <Link to="/signup"><Button primary={true}>Sign up</Button></Link>
         </div>
     </Container>
 )

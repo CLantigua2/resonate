@@ -5,7 +5,7 @@ import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom'
 import { ThemeProvider } from 'emotion-theming'
 import { GlobalReset } from './reset'
-import {theme} from './theme'
+import { theme } from './theme'
 
 
 const root = document.getElementById('root')
@@ -14,7 +14,7 @@ const AppContainer = () => (
     <Router>
         <GlobalReset />
         <ThemeProvider theme={theme}>
-        <App />
+            <App />
         </ThemeProvider>
     </Router>
 )

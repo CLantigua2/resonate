@@ -22,7 +22,7 @@ const Footer = () => (
             <Link to="/">Contact Us</Link>
             </div>
         </footer>
-        <p>Copywrite &copy; Resonate</p>
+        <p>Copywrite &copy; Resonate 2019</p>
     </Container>
 )
 
@@ -35,9 +35,19 @@ export default Footer
 const Container = styled.div`
     height: 100px;
     width: 100%;
-    background: ${({theme}) => theme.color.secondary};
+    background: ${({theme}) => theme.color.dark};
     margin-top: -100px;
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a, p, img, i {
+        color: #ffffff;
+    }
+    p {
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
     footer {
         width: 100%;
         display: flex;

@@ -10,19 +10,26 @@ const HomePage = () => (
         <Banner />
         <Featured />
         <Blog />
+        <Form>
+        </Form>
     </Container>
 )
 
 export default HomePage
 
 const Container = styled.div`
-    @media ${({theme}) => theme.media.tablet} {
+    @media ${({ theme }) => theme.media.tablet} {
             max-width: 768px;
         }
-    @media ${({theme}) => theme.media.mobile} {
+    @media ${({ theme }) => theme.media.mobile} {
             max-width: 320px;
         }
-    @media ${({theme}) => theme.media.laptop} {
+    @media ${({ theme }) => theme.media.laptop} {
             max-width: 1024px;
         }
+`
+
+const Form = styled.form`
+    width: 100%;
+    height: 100%;
 `
