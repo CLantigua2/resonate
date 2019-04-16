@@ -7,13 +7,14 @@
     "@emotion/styled": "^10.0.10",
     "axios": "^0.18.0",
     "emotion-theming": "^10.0.10",
-    "nuka-carousel": "^4.5.3",
+    "nuka-carousel": "^4.5.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-reveal": "^1.2.2",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "react-spinners": "^0.5.4"
   },
   "scripts": {
     "start": "react-scripts start",
