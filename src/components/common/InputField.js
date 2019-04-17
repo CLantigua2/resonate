@@ -17,9 +17,7 @@ export default InputField
 
 const Label = styled.label`
   position: relative;
-  margin: auto;
-  width: 100%;
-  max-width: 280px;
+  width: 500px;
   padding: 5px;
 
   .label {
@@ -31,7 +29,7 @@ const Label = styled.label`
     font-weight: 500;
     transform-origin: 0 0;
     transition: all 0.2s ease;
-    z-index: -1;
+    /* z-index: -1; */
   }
   .border {
     position: absolute;
