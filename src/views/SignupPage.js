@@ -73,10 +73,9 @@ const Section = styled.section`
         background: white;
         padding: 40px;
         border-radius: 10px;
-        width: 300px;
+        width: 350px;
     .divider {
         margin-bottom: 25%;
-
     }
 }
 `
