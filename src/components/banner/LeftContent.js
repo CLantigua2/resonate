@@ -5,10 +5,7 @@ import { Link } from 'react-router-dom'
 
 const LeftContainer = () => (
     <Container>
-        <div className="card">
-            <h5>Sign up for Free</h5>
-            <p>Never miss a deal</p>
-        </div>
+        <h5>Sign up for Free</h5>
         <div className="signup">
             <Link to="/signup"><Button primary={true}>Sign up</Button></Link>
         </div>

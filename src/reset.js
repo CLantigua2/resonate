@@ -1,8 +1,8 @@
 import React from 'react'
-import {Global, css} from '@emotion/core'
+import { Global, css } from '@emotion/core'
 
 export const GlobalReset = () => (
-    <Global styles={css`
+	<Global styles={css`
     /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -37,6 +37,7 @@ footer, header, hgroup, menu, nav, section {
 html {
 	box-sizing: border-box;
 	font-family: 'Roboto', 'Montserrat', sans-serif;
+	 text-rendering: optimizeLegibility;
 	font-size: 62.5%;
 	height: 100%;
 	margin: 0;

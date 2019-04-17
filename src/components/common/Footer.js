@@ -34,9 +34,10 @@ export default Footer
 
 const Container = styled.div`
     height: 100px;
-    width: 100%;
+    width: 1440px;
     background: ${({theme}) => theme.color.dark};
-    margin-top: -100px;
+    /* margin-top: -100px; */
+    margin: 0 auto;
     padding: 25px;
     display: flex;
     flex-direction: column;

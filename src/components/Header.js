@@ -14,6 +14,7 @@ const Header = () => (
             <Link to="/"><p>Blog</p></Link>
             <Link to="/"><p>Wishlist</p></Link>
             <Link to="/"><p>My Account</p></Link>
+            <i className="fas fa-cart-plus"></i>
         </Child>
     </Container>
 )
@@ -40,11 +41,23 @@ const Child = styled.div`
     a {
         p {
             font-size: 1.6rem;
-            color: ${({theme}) => theme.color.secondary};
+            color: ${({ theme }) => theme.color.secondary};
             transition: 0.3s ease-in-out;
             :hover {
-                color: ${({theme}) => theme.color.primary};
+                color: ${({ theme }) => theme.color.primary};
             }
         }
+    }
+    i {
+        font-size: 2rem;
+        border: 1px solid ${({ theme }) => theme.color.secondary};
+        padding: 10px;
+        border-radius: 50%;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+        :hover {
+                color: ${({ theme }) => theme.color.primary};
+                border: 1px solid ${({ theme }) => theme.color.primary};
+            }
     }
 `

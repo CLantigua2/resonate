@@ -3,20 +3,21 @@ import styled from '@emotion/styled'
 import { Link } from 'react-router-dom'
 import logo from '../image/logo.png'
 
-const NavBar = () => (
-    <Container>
-        <Child left>
-            <Link to="/"><img src={logo} alt="resonate logo" className="logo" /></Link>
-        </Child>
-        <Child midRight>
-            <button className="navLinks">FEATURES</button>
-            <button className="navLinks">PRODUCTS</button>
-            <button className="navLinks">PAGES</button>
-            <button className="navLinks">SHOP</button>
-        </Child>
-
-    </Container>
-)
+const NavBar = () => {
+        return (
+            < Container>
+                <Child left>
+                    <Link to="/"><img src={logo} alt="resonate logo" className="logo" /></Link>
+                </Child>
+                <Child midRight>
+                    <button className="navLinks">FEATURES</button>
+                    <button className="navLinks">PRODUCTS</button>
+                    <button className="navLinks">PAGES</button>
+                    <button className="navLinks">SHOP</button>
+                </Child>
+            </Container >
+        )
+}
 
 export default NavBar
 
@@ -26,7 +27,8 @@ const Container = styled.div`
     flex-direction: row;
     align-items: center;
     width: 100%;
-`
+    background: #ffffff;
+            `
 
 const Child = styled.div`
     justify-content: space-between;
@@ -41,12 +43,12 @@ const Child = styled.div`
         padding: 10px;
         transition: 0.3s ease-in-out;
         :hover {
-            color: ${({theme}) => theme.color.danger};
+            color: ${({ theme }) => theme.color.danger};
             border-color: red;
         }
     }
-    .logo {
-        width: 150px;
-    }
+        .logo {
+            width: 150px;
+        }
 
 `
